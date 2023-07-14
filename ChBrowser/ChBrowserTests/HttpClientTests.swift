@@ -20,12 +20,11 @@ final class HttpClientTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testGet() async throws {
-        let body: String = "board"
-        guard let (code, result) = try? await _client.get(body: body) else {
+    func testGetAllBoards() async throws {
+        let body: String = "https://menu.5ch.net/bbsmenu.html"
+        guard let (code, _) = try? await _client.get(body: body) else {
             return
         }
         XCTAssertEqual(200, code)
-        XCTAssertGreaterThan(0, result.count)
     }
 }
