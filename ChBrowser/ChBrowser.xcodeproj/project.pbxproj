@@ -16,6 +16,8 @@
 		C791F0A72A5D975B00898DC5 /* HttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C791F0A62A5D975B00898DC5 /* HttpClient.swift */; };
 		C791F0A92A5D977200898DC5 /* HttpClientProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C791F0A82A5D977200898DC5 /* HttpClientProtocol.swift */; };
 		C791F0AC2A619C6A00898DC5 /* HttpClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C791F0AB2A619C6A00898DC5 /* HttpClientTests.swift */; };
+		C791F0AF2A62296500898DC5 /* VGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C791F0AE2A62296500898DC5 /* VGridView.swift */; };
+		C791F0B22A62DDBB00898DC5 /* Kanna in Frameworks */ = {isa = PBXBuildFile; productRef = C791F0B12A62DDBB00898DC5 /* Kanna */; };
 		C7DD0DF42A5D864000729645 /* ChBrowserApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7DD0DF32A5D864000729645 /* ChBrowserApp.swift */; };
 		C7DD0DF62A5D864000729645 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7DD0DF52A5D864000729645 /* ContentView.swift */; };
 		C7DD0DF82A5D864200729645 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7DD0DF72A5D864200729645 /* Assets.xcassets */; };
@@ -52,6 +54,7 @@
 		C791F0A62A5D975B00898DC5 /* HttpClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpClient.swift; sourceTree = "<group>"; };
 		C791F0A82A5D977200898DC5 /* HttpClientProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpClientProtocol.swift; sourceTree = "<group>"; };
 		C791F0AB2A619C6A00898DC5 /* HttpClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpClientTests.swift; sourceTree = "<group>"; };
+		C791F0AE2A62296500898DC5 /* VGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VGridView.swift; sourceTree = "<group>"; };
 		C7DD0DF02A5D864000729645 /* ChBrowser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChBrowser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7DD0DF32A5D864000729645 /* ChBrowserApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChBrowserApp.swift; sourceTree = "<group>"; };
 		C7DD0DF52A5D864000729645 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -69,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C791F0B22A62DDBB00898DC5 /* Kanna in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,6 +96,7 @@
 		C791F0962A5D8D1700898DC5 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C791F0AD2A62290500898DC5 /* Parts */,
 				C791F0992A5D8D7400898DC5 /* MainView.swift */,
 			);
 			path = View;
@@ -123,6 +128,14 @@
 				C791F0A42A5D93A400898DC5 /* UserDefaultsProtocol.swift */,
 			);
 			path = Util;
+			sourceTree = "<group>";
+		};
+		C791F0AD2A62290500898DC5 /* Parts */ = {
+			isa = PBXGroup;
+			children = (
+				C791F0AE2A62296500898DC5 /* VGridView.swift */,
+			);
+			path = Parts;
 			sourceTree = "<group>";
 		};
 		C7DD0DE72A5D864000729645 = {
@@ -202,6 +215,9 @@
 			dependencies = (
 			);
 			name = ChBrowser;
+			packageProductDependencies = (
+				C791F0B12A62DDBB00898DC5 /* Kanna */,
+			);
 			productName = ChBrowser;
 			productReference = C7DD0DF02A5D864000729645 /* ChBrowser.app */;
 			productType = "com.apple.product-type.application";
@@ -274,6 +290,9 @@
 				Base,
 			);
 			mainGroup = C7DD0DE72A5D864000729645;
+			packageReferences = (
+				C791F0B02A62DDBB00898DC5 /* XCRemoteSwiftPackageReference "Kanna" */,
+			);
 			productRefGroup = C7DD0DF12A5D864000729645 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -320,6 +339,7 @@
 				C791F0A12A5D8DD300898DC5 /* Logger.swift in Sources */,
 				C791F09A2A5D8D7400898DC5 /* MainView.swift in Sources */,
 				C7DD0DF42A5D864000729645 /* ChBrowserApp.swift in Sources */,
+				C791F0AF2A62296500898DC5 /* VGridView.swift in Sources */,
 				C791F0A72A5D975B00898DC5 /* HttpClient.swift in Sources */,
 				C791F09E2A5D8DB200898DC5 /* MainModel.swift in Sources */,
 				C791F0A92A5D977200898DC5 /* HttpClientProtocol.swift in Sources */,
@@ -651,6 +671,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C791F0B02A62DDBB00898DC5 /* XCRemoteSwiftPackageReference "Kanna" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/tid-kijyun/Kanna";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C791F0B12A62DDBB00898DC5 /* Kanna */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C791F0B02A62DDBB00898DC5 /* XCRemoteSwiftPackageReference "Kanna" */;
+			productName = Kanna;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C7DD0DE82A5D864000729645 /* Project object */;
 }

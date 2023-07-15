@@ -8,8 +8,15 @@
 import SwiftUI
 
 struct MainView: View {
+    let testArray = ["Apple", "Boeing", "Cisco", "Dow", "EA", "GS"]
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+//            NavigationLink(destination: , label: ) {
+            ScrollView {
+                VGridView(array: testArray, onEvent: nil)
+            }
+//            }
+        }
     }
 }
 
