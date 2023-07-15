@@ -20,8 +20,16 @@ final class HttpClientTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testGetAllBoards() async throws {
+    func testGetAllBoards5ch() async throws {
         let body: String = "https://menu.5ch.net/bbsmenu.json"
+        guard let (code, _) = try? await _client.get(body: body) else {
+            return
+        }
+        XCTAssertEqual(200, code)
+    }
+    
+    func testGetAllBoardsSannan() async throws {
+        let body: String = "https://sannan.nl/sannan_bbsmenu.html"
         guard let (code, _) = try? await _client.get(body: body) else {
             return
         }
