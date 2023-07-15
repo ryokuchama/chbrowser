@@ -21,7 +21,7 @@ final class HttpClientTests: XCTestCase {
     }
 
     func testGetAllBoards() async throws {
-        let body: String = "https://menu.5ch.net/bbsmenu.html"
+        let body: String = "https://menu.5ch.net/bbsmenu.json"
         guard let (code, _) = try? await _client.get(body: body) else {
             return
         }
