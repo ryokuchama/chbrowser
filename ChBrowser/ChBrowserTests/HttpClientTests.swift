@@ -22,17 +22,13 @@ final class HttpClientTests: XCTestCase {
 
     func testGetAllBoards5ch() async throws {
         let body: String = "https://menu.5ch.net/bbsmenu.json"
-        guard let (code, _) = try? await _client.get(body: body) else {
-            return
-        }
-        XCTAssertEqual(200, code)
+        let result = await _client.get(body: body)
+        XCTAssertNotNil(result)
     }
     
     func testGetAllBoardsSannan() async throws {
         let body: String = "https://sannan.nl/sannan_bbsmenu.html"
-        guard let (code, _) = try? await _client.get(body: body) else {
-            return
-        }
-        XCTAssertEqual(200, code)
+        let result = await _client.get(body: body)
+        XCTAssertNotNil(result)
     }
 }
