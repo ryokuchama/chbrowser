@@ -9,17 +9,16 @@ import Foundation
 
 class HttpClient: HttpClientProtocol {
     
-    func get(body: String) async throws -> (Int, Data) {
+    func get(body: String) async -> Data? {
         return await withCheckedContinuation { continution in
             let url = URL(string: body)!
             let request = URLRequest(url: url)
             let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
-                if let e = error {
-                    continution.resume(throwing: e as! Never)
+                if let _ = error {
+                    continution.resume(returning: nil)
                 }
                 else {
-                    let res: HTTPURLResponse = response as! HTTPURLResponse
-                    continution.resume(returning: (res.statusCode, data!))
+                    continution.resume(returning: data!)
                 }
             }
             task.resume()
