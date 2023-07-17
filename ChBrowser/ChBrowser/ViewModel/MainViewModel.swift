@@ -6,3 +6,12 @@
 //
 
 import Foundation
+
+class MainViewModel: ObservableObject {
+    @Published var list: [String:String] = [:]
+    private var model: MainModelProtocol?
+    
+    func initialize() {
+        
+    }
+}

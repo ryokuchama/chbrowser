@@ -8,6 +8,7 @@
 import Foundation
 
 protocol UserDefaultsProtocol {
-    func getValue(forKey: String) -> Any?
-    func setvalue(forKey: String, value: Any)
+    func registerInitData()
+    func getValue(forKey: UserDefaultKeys) -> Any?
+    func setvalue(forKey: UserDefaultKeys, value: Any)
 }

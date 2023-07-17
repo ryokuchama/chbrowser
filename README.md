@@ -2,12 +2,12 @@
 
 ## RoadMap
 ### Must
-- [ ] Generate Project
-- [ ] Base func
-  - [ ] logger
-  - [ ] UserDefaults
+- [x] Generate Project
+- [x] Base func
+  - [x] logger
+  - [x] UserDefaults
 - [ ] Main View
-  - [ ] View
+  - [x] View
   - [ ] ViewModel
   - [ ] API request
 - [ ] Setup Bitrise
@@ -16,6 +16,7 @@
 - [ ] Threads View
   - [ ] Read
   - [ ] Write
+- [ ] CI(github actions)
 
 ### Optional
 - [ ] xcodegen
