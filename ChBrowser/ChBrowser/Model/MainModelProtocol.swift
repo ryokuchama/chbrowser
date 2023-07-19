@@ -9,5 +9,5 @@ import Foundation
 
 protocol MainModelProtocol {
     
-    func initialize()
+    func initialize() async -> [String: String]?
 }

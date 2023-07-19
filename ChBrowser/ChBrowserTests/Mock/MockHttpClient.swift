@@ -11,7 +11,11 @@ import Foundation
 class MockCorrectHttpClient: HttpClientProtocol {
     func get(body: String) async -> Data? {
         return await withCheckedContinuation() { continution in
-            continution.resume(returning: Data())
+            let str = """
+                    <html><head><title>Welcome to Sannan</title></head><body><a href="https://google.co.jp">Google</a><a href="https://amazon.co.jp">Amazon</a></body></html>
+                    """
+            let data: Data? = str.data(using: .utf8)
+            continution.resume(returning: data)
         }
     }
     
