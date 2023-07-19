@@ -12,7 +12,8 @@ protocol ParserProtocol {
     /// Parse HTML, return Dictionary
     /// - Parameters:
     ///   - text: target String
+    ///   - tags: target tags
     ///   - encoding: Text encoding
     /// - Returns: Dict[String:String]
-    func parse(fromHtmlToAAndHref text: String, encoding: String.Encoding) -> [String: String]?
+    func parse(fromHtmlToString text: String, tag: String, encoding: String.Encoding) -> [String: String]
 }

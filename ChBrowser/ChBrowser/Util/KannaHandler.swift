@@ -10,22 +10,27 @@ import Kanna
 
 class KannaHandler: ParserProtocol {
     
-    func parse(fromHtmlToAAndHref text: String, encoding: String.Encoding = .utf8) -> [String: String]? {
+   func parse(fromHtmlToString text: String, tag: String, encoding: String.Encoding = .utf8) -> [String: String] {
         do {
             let doc = try HTML(html: text, encoding: encoding)
             // `css selector` is faster, so adopted as the research algolism
             // because `xpath` research tag bidirectional,
             // on the other hand, `css selector` reseach tag unidirectional.
             var dict: [String:String] = [:]
-            dict["title"] = doc.title
-            for d in doc.css(text) {
-                dict[d["a"]!] = d["href"]
+            for d in doc.css(tag) {
+                if let text = d.text {
+                    if tag == "a" {
+                        dict[text] = d["href"]
+                    } else {
+                        dict[tag] = d[text]
+                    }
+                }
             }
             return dict
         }
         catch {
             Logger.error("HTML parse failed.")
-            return nil
+            return [:]
         }
     }
 }

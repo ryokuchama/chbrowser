@@ -23,11 +23,13 @@
 		C791F0B82A657CBA00898DC5 /* KannaHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C791F0B72A657CBA00898DC5 /* KannaHandler.swift */; };
 		C791F0BA2A657CCF00898DC5 /* ParserProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C791F0B92A657CCF00898DC5 /* ParserProtocol.swift */; };
 		C791F0BC2A65947600898DC5 /* MainModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C791F0BB2A65947600898DC5 /* MainModelTests.swift */; };
+		C791F0C22A68259A00898DC5 /* MockParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C791F0C12A68259A00898DC5 /* MockParser.swift */; };
+		C791F0C42A6826DF00898DC5 /* MockHttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C791F0C32A6826DF00898DC5 /* MockHttpClient.swift */; };
+		C791F0C62A68289B00898DC5 /* KannaHandlerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C791F0C52A68289B00898DC5 /* KannaHandlerTests.swift */; };
 		C7DD0DF42A5D864000729645 /* ChBrowserApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7DD0DF32A5D864000729645 /* ChBrowserApp.swift */; };
 		C7DD0DF62A5D864000729645 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7DD0DF52A5D864000729645 /* ContentView.swift */; };
 		C7DD0DF82A5D864200729645 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7DD0DF72A5D864200729645 /* Assets.xcassets */; };
 		C7DD0DFB2A5D864200729645 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7DD0DFA2A5D864200729645 /* Preview Assets.xcassets */; };
-		C7DD0E052A5D864200729645 /* ChBrowserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7DD0E042A5D864200729645 /* ChBrowserTests.swift */; };
 		C7DD0E0F2A5D864200729645 /* ChBrowserUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7DD0E0E2A5D864200729645 /* ChBrowserUITests.swift */; };
 		C7DD0E112A5D864200729645 /* ChBrowserUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7DD0E102A5D864200729645 /* ChBrowserUITestsLaunchTests.swift */; };
 /* End PBXBuildFile section */
@@ -65,13 +67,15 @@
 		C791F0B72A657CBA00898DC5 /* KannaHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KannaHandler.swift; sourceTree = "<group>"; };
 		C791F0B92A657CCF00898DC5 /* ParserProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParserProtocol.swift; sourceTree = "<group>"; };
 		C791F0BB2A65947600898DC5 /* MainModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainModelTests.swift; sourceTree = "<group>"; };
+		C791F0C12A68259A00898DC5 /* MockParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockParser.swift; sourceTree = "<group>"; };
+		C791F0C32A6826DF00898DC5 /* MockHttpClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockHttpClient.swift; sourceTree = "<group>"; };
+		C791F0C52A68289B00898DC5 /* KannaHandlerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KannaHandlerTests.swift; sourceTree = "<group>"; };
 		C7DD0DF02A5D864000729645 /* ChBrowser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChBrowser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7DD0DF32A5D864000729645 /* ChBrowserApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChBrowserApp.swift; sourceTree = "<group>"; };
 		C7DD0DF52A5D864000729645 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C7DD0DF72A5D864200729645 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C7DD0DFA2A5D864200729645 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C7DD0E002A5D864200729645 /* ChBrowserTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChBrowserTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C7DD0E042A5D864200729645 /* ChBrowserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChBrowserTests.swift; sourceTree = "<group>"; };
 		C7DD0E0A2A5D864200729645 /* ChBrowserUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChBrowserUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7DD0E0E2A5D864200729645 /* ChBrowserUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChBrowserUITests.swift; sourceTree = "<group>"; };
 		C7DD0E102A5D864200729645 /* ChBrowserUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChBrowserUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -152,6 +156,25 @@
 			path = Parts;
 			sourceTree = "<group>";
 		};
+		C791F0BD2A6824D800898DC5 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				C791F0C12A68259A00898DC5 /* MockParser.swift */,
+				C791F0C32A6826DF00898DC5 /* MockHttpClient.swift */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
+		C791F0BE2A6824E200898DC5 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				C791F0AB2A619C6A00898DC5 /* HttpClientTests.swift */,
+				C791F0BB2A65947600898DC5 /* MainModelTests.swift */,
+				C791F0C52A68289B00898DC5 /* KannaHandlerTests.swift */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
 		C7DD0DE72A5D864000729645 = {
 			isa = PBXGroup;
 			children = (
@@ -198,9 +221,8 @@
 		C7DD0E032A5D864200729645 /* ChBrowserTests */ = {
 			isa = PBXGroup;
 			children = (
-				C7DD0E042A5D864200729645 /* ChBrowserTests.swift */,
-				C791F0AB2A619C6A00898DC5 /* HttpClientTests.swift */,
-				C791F0BB2A65947600898DC5 /* MainModelTests.swift */,
+				C791F0BE2A6824E200898DC5 /* Tests */,
+				C791F0BD2A6824D800898DC5 /* Mock */,
 			);
 			path = ChBrowserTests;
 			sourceTree = "<group>";
@@ -372,8 +394,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C791F0C62A68289B00898DC5 /* KannaHandlerTests.swift in Sources */,
 				C791F0AC2A619C6A00898DC5 /* HttpClientTests.swift in Sources */,
-				C7DD0E052A5D864200729645 /* ChBrowserTests.swift in Sources */,
+				C791F0C42A6826DF00898DC5 /* MockHttpClient.swift in Sources */,
+				C791F0C22A68259A00898DC5 /* MockParser.swift in Sources */,
 				C791F0BC2A65947600898DC5 /* MainModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
