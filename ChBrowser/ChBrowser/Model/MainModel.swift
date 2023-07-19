@@ -20,7 +20,7 @@ class MainModel: MainModelProtocol {
                 return
             }
             let toString: String = try! JSONSerialization.jsonObject(with: result) as! String
-            let parsed = parser?.parse(fromHtmlToString: toString, tag: "title", encoding: .shiftJIS)
+            let parsed = parser?.parse(fromHtmlToStringWithTitle: toString, tag: "title", encoding: .shiftJIS)
             Logger.info("parsed: \(String(describing: parsed))")
         }
     }
