@@ -24,8 +24,8 @@ class MainModel: MainModelProtocol {
         }
         let parsed = parser!.parse(fromHtmlToStringWithTitle: toString, tag: "a", encoding: .shiftJIS)
         Logger.debug("parsed: \(String(describing: parsed))")
-        if parsed.count > 0 {
-            return parsed
+        if let _parsed = parsed {
+            return _parsed
         } else {
             return nil
         }

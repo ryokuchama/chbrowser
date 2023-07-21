@@ -15,5 +15,5 @@ protocol ParserProtocol {
     ///   - tags: target tags
     ///   - encoding: Text encoding
     /// - Returns: Dict[String:String]
-    func parse(fromHtmlToStringWithTitle text: String, tag: String, encoding: String.Encoding) -> [String: String]
+    func parse(fromHtmlToStringWithTitle text: String, tag: String, encoding: String.Encoding) -> [String: String]?
 }

@@ -10,14 +10,13 @@ import Kanna
 
 class KannaHandler: ParserProtocol {
     
-   func parse(fromHtmlToStringWithTitle text: String, tag: String, encoding: String.Encoding = .utf8) -> [String: String] {
+   func parse(fromHtmlToStringWithTitle text: String, tag: String, encoding: String.Encoding = .utf8) -> [String: String]? {
         do {
             let doc = try HTML(html: text, encoding: encoding)
             // `css selector` is faster, so adopted as the research algolism
             // because `xpath` research tag bidirectional,
             // on the other hand, `css selector` reseach tag unidirectional.
             var dict: [String:String] = [:]
-            dict["title"] = doc.title
             for d in doc.css(tag) {
                 if let text = d.text {
                     if tag == "a" {
@@ -27,11 +26,16 @@ class KannaHandler: ParserProtocol {
                     }
                 }
             }
+            guard dict.count > 0 else {
+                Logger.error("tag \(tag) not found")
+                return nil
+            }
+            dict["title"] = doc.title
             return dict
         }
         catch {
             Logger.error("HTML parse failed.")
-            return [:]
+            return nil
         }
     }
 }
