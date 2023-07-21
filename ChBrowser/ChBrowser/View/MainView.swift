@@ -8,14 +8,25 @@
 import SwiftUI
 
 struct MainView: View {
-    let testArray = ["Apple", "Boeing", "Cisco", "Dow", "EA", "GS"]
+    @ObservedObject var viewModel: MainViewModel
+    init() {
+        self.viewModel = .init()
+        let model: MainModel = .init()
+        let http: HttpClient = .init()
+        let parser: KannaHandler = .init()
+        model.httpClient = http
+        model.parser = parser
+        viewModel.model = model
+    }
     var body: some View {
         NavigationView {
 //            NavigationLink(destination: , label: ) {
             ScrollView {
-                VGridView(array: testArray, onEvent: nil)
+                VGridView(array: Array(viewModel.list.keys), onEvent: nil)
             }
 //            }
+        }.onAppear() {
+            viewModel.initialize()
         }
     }
 }
