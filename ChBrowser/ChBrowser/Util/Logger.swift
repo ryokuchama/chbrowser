@@ -46,7 +46,7 @@ class Logger {
                      file: String = #file,
                      function: String = #function,
                      line: Int = #line) {
-        let level: String = "📕Error "
+        let level: String = "📕Error"
         log(fileName: file, line: line, function: function, level: level, text: text)
     }
     

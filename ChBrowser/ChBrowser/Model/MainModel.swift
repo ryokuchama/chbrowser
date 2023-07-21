@@ -18,11 +18,11 @@ class MainModel: MainModelProtocol {
             Logger.error("Access to \(body), but the result is not returned")
             return nil
         }
-        guard let toString: String = String(data: result, encoding: .shiftJIS) else {
+        guard let toString: String = String(data: result, encoding: .utf8) else {
             Logger.error("Cast failed: Data to String")
             return nil
         }
-        let parsed = parser!.parse(fromHtmlToStringWithTitle: toString, tag: "a", encoding: .shiftJIS)
+        let parsed = parser!.parse(fromHtmlToStringWithTitle: toString, tag: "a", encoding: .utf8)
         Logger.debug("parsed: \(String(describing: parsed))")
         if let _parsed = parsed {
             return _parsed
