@@ -20,14 +20,12 @@ struct MainView: View {
     }
     var body: some View {
         NavigationView {
-//            NavigationLink(destination: , label: ) {
             ScrollView {
-                VGridView(array: Array(viewModel.list.keys), onEvent: nil)
+                VGridView(dict: viewModel.list)
             }
-//            }
         }.onAppear() {
             viewModel.initialize()
-        }
+        }.navigationTitle(viewModel.list["title"] ?? "三男にようこそ")
     }
 }
 

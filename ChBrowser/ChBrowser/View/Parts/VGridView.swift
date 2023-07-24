@@ -8,27 +8,25 @@
 import SwiftUI
 
 struct VGridView: View {
-    let array: [String]
-    let onEvent: ((String)->(Void))?
+    let dict: [String:String]
     private let columns = [GridItem(.flexible()), GridItem(.flexible())]
     var body: some View {
         LazyVGrid(columns: columns, alignment: .leading) {
-            ForEach(array, id: \.self) { element in
-                HStack{
-                    Image(systemName: "folder.fill")
-                    Text("\(element)")
+            ForEach(Array(dict.keys), id: \.self) { element in
+                NavigationLink(destination: ThreadsView(boardTitle: element, boardUrl: dict[element]!)) {
+                    HStack{
+                        Image(systemName: "folder.fill")
+                        Text("\(element)")
+                    }
                 }
             }.padding()
         }
-//        .onTapGesture {
-//
-//        }
     }
 }
 
 struct VGridView_Previews: PreviewProvider {
     static var previews: some View {
-        let array: [String] = ["Apple", "Boeing", "Cisco", "Dow", "EA", "GS"]
-        VGridView(array: array, onEvent: nil)
+        let dict: [String:String] = ["Amazon":"https://amazon.co.jp","Google":"https://google.co.jp"]
+        VGridView(dict: dict)
     }
 }
