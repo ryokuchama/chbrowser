@@ -29,6 +29,10 @@
 		C791F0C82A6BBFBC00898DC5 /* ThreadsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C791F0C72A6BBFBC00898DC5 /* ThreadsView.swift */; };
 		C791F0CA2A6BC0B300898DC5 /* ThreadsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C791F0C92A6BC0B300898DC5 /* ThreadsViewModel.swift */; };
 		C791F0CE2A6EB93700898DC5 /* ListCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C791F0CD2A6EB93700898DC5 /* ListCellView.swift */; };
+		C791F0D02A6EC53400898DC5 /* ThreadsModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C791F0CF2A6EC53400898DC5 /* ThreadsModelProtocol.swift */; };
+		C791F0D22A6EC54100898DC5 /* ThreadsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C791F0D12A6EC54100898DC5 /* ThreadsModel.swift */; };
+		C791F0D42A6EC88500898DC5 /* ThreadsModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C791F0D32A6EC88500898DC5 /* ThreadsModelTests.swift */; };
+		C791F0D62A6F835D00898DC5 /* ThreadsStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = C791F0D52A6F835D00898DC5 /* ThreadsStruct.swift */; };
 		C7DD0DF42A5D864000729645 /* ChBrowserApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7DD0DF32A5D864000729645 /* ChBrowserApp.swift */; };
 		C7DD0DF62A5D864000729645 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7DD0DF52A5D864000729645 /* ContentView.swift */; };
 		C7DD0DF82A5D864200729645 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7DD0DF72A5D864200729645 /* Assets.xcassets */; };
@@ -76,6 +80,10 @@
 		C791F0C72A6BBFBC00898DC5 /* ThreadsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadsView.swift; sourceTree = "<group>"; };
 		C791F0C92A6BC0B300898DC5 /* ThreadsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadsViewModel.swift; sourceTree = "<group>"; };
 		C791F0CD2A6EB93700898DC5 /* ListCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCellView.swift; sourceTree = "<group>"; };
+		C791F0CF2A6EC53400898DC5 /* ThreadsModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadsModelProtocol.swift; sourceTree = "<group>"; };
+		C791F0D12A6EC54100898DC5 /* ThreadsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadsModel.swift; sourceTree = "<group>"; };
+		C791F0D32A6EC88500898DC5 /* ThreadsModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadsModelTests.swift; sourceTree = "<group>"; };
+		C791F0D52A6F835D00898DC5 /* ThreadsStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadsStruct.swift; sourceTree = "<group>"; };
 		C7DD0DF02A5D864000729645 /* ChBrowser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChBrowser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7DD0DF32A5D864000729645 /* ChBrowserApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChBrowserApp.swift; sourceTree = "<group>"; };
 		C7DD0DF52A5D864000729645 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -139,6 +147,9 @@
 				C791F0B32A62E70700898DC5 /* MainModelProtocol.swift */,
 				C791F0A62A5D975B00898DC5 /* HttpClient.swift */,
 				C791F0A82A5D977200898DC5 /* HttpClientProtocol.swift */,
+				C791F0CF2A6EC53400898DC5 /* ThreadsModelProtocol.swift */,
+				C791F0D12A6EC54100898DC5 /* ThreadsModel.swift */,
+				C791F0D52A6F835D00898DC5 /* ThreadsStruct.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -180,6 +191,7 @@
 				C791F0AB2A619C6A00898DC5 /* HttpClientTests.swift */,
 				C791F0BB2A65947600898DC5 /* MainModelTests.swift */,
 				C791F0C52A68289B00898DC5 /* KannaHandlerTests.swift */,
+				C791F0D32A6EC88500898DC5 /* ThreadsModelTests.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -389,6 +401,9 @@
 				C791F0CA2A6BC0B300898DC5 /* ThreadsViewModel.swift in Sources */,
 				C791F0AF2A62296500898DC5 /* VGridView.swift in Sources */,
 				C791F0B42A62E70700898DC5 /* MainModelProtocol.swift in Sources */,
+				C791F0D62A6F835D00898DC5 /* ThreadsStruct.swift in Sources */,
+				C791F0D02A6EC53400898DC5 /* ThreadsModelProtocol.swift in Sources */,
+				C791F0D22A6EC54100898DC5 /* ThreadsModel.swift in Sources */,
 				C791F0A72A5D975B00898DC5 /* HttpClient.swift in Sources */,
 				C791F0B62A62EBA100898DC5 /* UserDefaultsEnum.swift in Sources */,
 				C791F0BA2A657CCF00898DC5 /* ParserProtocol.swift in Sources */,
@@ -411,6 +426,7 @@
 				C791F0C42A6826DF00898DC5 /* MockHttpClient.swift in Sources */,
 				C791F0C22A68259A00898DC5 /* MockParser.swift in Sources */,
 				C791F0BC2A65947600898DC5 /* MainModelTests.swift in Sources */,
+				C791F0D42A6EC88500898DC5 /* ThreadsModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

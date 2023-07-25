@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+class ThreadsViewModel: ObservableObject {
+    func initialize(url: String) {
+        
+    }
+}
