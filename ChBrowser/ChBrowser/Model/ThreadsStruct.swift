@@ -10,5 +10,5 @@ import Foundation
 struct ThreadsStruct {
     let title: String
     let responseCount: Int
-    let datNumber: Int
+    let datNumber: String
 }

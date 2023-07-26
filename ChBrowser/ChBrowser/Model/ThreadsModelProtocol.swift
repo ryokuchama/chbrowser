@@ -8,5 +8,5 @@
 import Foundation
 
 protocol ThreadsModelProtocol {
-    func initialize(url: String) async
+    func initialize(url: String) async -> [ThreadsStruct]?
 }

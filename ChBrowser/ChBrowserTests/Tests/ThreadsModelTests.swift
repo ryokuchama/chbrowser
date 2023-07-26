@@ -23,6 +23,17 @@ final class ThreadsModelTests: XCTestCase {
         let http: HttpClient = .init()
         model.httpClient = http
         let url: String = "https://sannan.nl/livegalileo/"
-        await model.initialize(url: url)
+        let result = await model.initialize(url: url)
+        XCTAssertNotNil(result)
+        XCTAssertGreaterThan(result!.count, 0)
+    }
+    
+    func testInitializeGetFailed() async {
+        let model: ThreadsModel = .init()
+        let http: MockErrorHttpClient = .init()
+        model.httpClient = http
+        let url: String = "https://sannan.nl/livegalileo/"
+        let result = await model.initialize(url: url)
+        XCTAssertNil(result)
     }
 }
