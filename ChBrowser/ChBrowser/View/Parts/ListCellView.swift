@@ -14,7 +14,10 @@ struct ListCellView: View {
     let boardName: String
     var body: some View {
         VStack {
-            Text("\(title)").font(.title)
+            HStack {
+                Text("\(title)").font(.body)
+                Spacer()
+            }
         }
     }
 }

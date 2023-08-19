@@ -14,9 +14,11 @@ struct ThreadsView: View {
     
     var body: some View {
         VStack {
-            Text("Board Name: \(boardTitle), URL:\(boardUrl)")
-            ForEach(viewModel.threads, id: \.self.datNumber) { element in
-                ListCellView(title: element.title, resCount: element.responseCount, datNumber: element.datNumber, boardName: boardTitle)
+            ScrollView {
+                ForEach(viewModel.threads, id: \.self.datNumber) { element in
+                    ListCellView(title: element.title, resCount: element.responseCount, datNumber: element.datNumber, boardName: boardTitle)
+                    Divider()
+                }
             }
         }.onAppear{
             let http: HttpClient = .init()
