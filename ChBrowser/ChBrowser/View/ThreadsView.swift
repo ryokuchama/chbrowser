@@ -10,8 +10,21 @@ import SwiftUI
 struct ThreadsView: View {
     let boardTitle: String
     let boardUrl: String
+    @ObservedObject var viewModel: ThreadsViewModel = .init()
+    
     var body: some View {
-        Text("Board Name: \(boardTitle), URL:\(boardUrl)")
+        VStack {
+            Text("Board Name: \(boardTitle), URL:\(boardUrl)")
+            ForEach(viewModel.threads, id: \.self.datNumber) { element in
+                ListCellView(title: element.title, resCount: element.responseCount, datNumber: element.datNumber, boardName: boardTitle)
+            }
+        }.onAppear{
+            let http: HttpClient = .init()
+            let model: ThreadsModel = .init()
+            model.httpClient = http
+            viewModel.model = model
+            viewModel.initialize(url: boardUrl)
+        }
     }
 }
 

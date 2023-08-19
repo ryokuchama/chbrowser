@@ -9,6 +9,9 @@ import SwiftUI
 
 struct ListCellView: View {
     let title: String
+    let resCount: Int
+    let datNumber: String
+    let boardName: String
     var body: some View {
         VStack {
             Text("\(title)").font(.title)
@@ -19,6 +22,9 @@ struct ListCellView: View {
 struct ListCellView_Previews: PreviewProvider {
     static var previews: some View {
         let title: String = ""
-        ListCellView(title: title)
+        let resCount: Int = 0
+        let datNumber: String = "00000000"
+        let boardName = ""
+        ListCellView(title: title, resCount: resCount, datNumber: datNumber, boardName: boardName)
     }
 }
